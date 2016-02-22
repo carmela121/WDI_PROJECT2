@@ -1,3 +1,3 @@
 get "/" do
-    erb :"/static/home"
+    erb :"home"
 end

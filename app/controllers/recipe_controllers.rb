@@ -1,12 +1,11 @@
 # INDEX
 get '/recipes' do 
-  @recipe = Recipe.all 
-  erb :'recipe/index'
+  @recipes = Recipe.all 
+  erb :'recipes/index'
 end
 
 # NEW
-
-get '/recipe/new' do 
+get '/recipes/new' do 
   @recipe = Recipe.new
   erb :'recipes/new'
 end
