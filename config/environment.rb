@@ -25,7 +25,12 @@ configure do
   set :views, File.join(APP_ROOT, "app", "views")
 end
 
+#require all our models, controllers and helpers
 
 ["models", "controllers", "helpers"].each do |folder|
   Dir[APP_ROOT.join('app', folder, '*.rb')].each { |file| require file }
 end
+
+
+
+
