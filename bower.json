@@ -1,0 +1,21 @@
+{
+  "name": "food",
+  "homepage": "https://github.com/carmela121/WDI_PROJECT2",
+  "authors": [
+    "carmela121 <mcarmencarmona@hotmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}
