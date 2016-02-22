@@ -6,23 +6,7 @@
   <br>
   <label for="recipe[description]">Description:</label>
   <input name="recipe[description]">
-  <br>
-  <label for="recipe[user_id]">User:</label>
-  <select name="recipe[user_id]">
-    <% @users.each do |user| %>
-      <option value="<%= user.id %>"><%= "#{user.name}" %></option>
-    <% end %>
-  </select>
-  <br>
-  <label for="album[price]">Price (cents):</label>
-  <input name="album[price]">
-  <br>
-  <label for="album[genre_ids]">Genres:</label>
-  <br>
-  <% Genre.all.each do |genre| %>
-    <label for="genre_<%= genre.id%>"><%= genre.name %></label>
-    <input type="checkbox" name="album[genre_ids][]" id="genre_<%= genre.id%>" value="<%= genre.id%>">
-    <br>
-  <% end %>
-  <input type="submit" value="Create">
-</form>
+  
+  
+  
+  

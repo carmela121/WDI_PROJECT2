@@ -1,1 +1,12 @@
 <h2>Edit Recipes</h2>
+
+<form action="/recipes/<%= @recipe.id %>/update" method="post">
+  <label for="recipe[title]">Title:</label>
+  <input name="recipe[title]" value="<%= @recipe.title %>">
+  <br>
+  <label for="recipe[description]">Poster:</label>
+  <input name="recipe[description]" value="<%= @recipe.description %>">
+  <br>
+  <label for="recipe[video_url]">url:</label>
+  <input name="recipe[video_url]" value="<%= @recipe.video_url %>">
+  

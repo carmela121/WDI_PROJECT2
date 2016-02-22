@@ -1,1 +1,14 @@
-<h2>Show</h2>
+<h2><%= @recipe.title %> by <%= @recipe.user.username %></h2>
+
+<p><strong>recipe:</strong> <%= @recipe.title %></p>
+
+
+
+<ul>
+
+  <% @recipe.categories.each do |category|  %>
+    <li><%= category.name %></li>
+  <% end %>
+</ul>
+
+<a href="/recipes/<%= @recipe.id %>/edit">Edit</a>
