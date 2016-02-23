@@ -1,18 +1,9 @@
 <h1>New Recipe</h1>
 <form action="/recipes" method="post">
-  <input type="checkbox" name="category" value="Meat and Poultry">Meat and Poultry
-  <input type="checkbox" name="category" value="Fish and Seafood">Fish and Seafood
-  <input type="checkbox" name="category" value="Fruits and Vegetables">Fruits and Vegetables<br>
-  <input type="checkbox" name="category" value="Rice">Rice
-  <input type="checkbox" name="category" value="Pasta">Pasta
-  <input type="checkbox" name="category" value="Healthy">Healthy<br>
-  <input type="checkbox" name="category" value="Dessert">Dessert
-  <input type="checkbox" name="category" value="Bread">Bread
-  <input type="checkbox" name="category" value="Snack">Snack<br>
-  <input type="checkbox" name="category" value="Drink">Drink
-  <input type="checkbox" name="category" value="Salad">Salad
-  <input type="checkbox" name="category" value="World Cuisine">World Cuisine
-  <input type="checkbox" name="category" value="Soup and Stews">Soup and Stews
+  
+  <% @recipe.categories.each do |category|  %>
+  <input type="checkbox" name="category" id= [] <%= category.name %>
+  <% end %>
 
   <label for="recipe[title]">Recipe:</label>
   <input name="recipe[title]">

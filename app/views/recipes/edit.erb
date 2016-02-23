@@ -4,9 +4,17 @@
   <label for="recipe[title]">Title:</label>
   <input name="recipe[title]" value="<%= @recipe.title %>">
   <br>
-  <label for="recipe[description]">Poster:</label>
-  <input name="recipe[description]" value="<%= @recipe.description %>">
+  <label for="recipe[description]">Description:</label>
+    <input name="recipe[description]" value="<%= @recipe.description %>">
+    <br>
+  </br>
   <br>
   <label for="recipe[video_url]">url:</label>
   <input name="recipe[video_url]" value="<%= @recipe.video_url %>">
+  <br>
+  <% Category.all.each do |category| %>
+    <label for="category_<%= category.id%>"><%= category.name %></label>
+    <input type="checkbox" name="recipe[category_ids][]" id="genre_<%= category.id%>" value="<%= category.id%>" <%= "checked=checked" if @recipe.category_ids.include?(category.id)%>>
+    <br>
+  <% end %>
   
