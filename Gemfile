@@ -14,3 +14,4 @@ gem "pg"
 gem "sass"
 gem 'tux', '~> 0.3.0'
 gem "pry"
+gem "bcrypt"
