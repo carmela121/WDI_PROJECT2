@@ -1,7 +1,11 @@
 #get the form
 
-get '/register' do 
-  @user = User.new
-  erb :'authentications/new'
+post '/register' do 
+  @user = User.new(params[:user])
+  if @user.save
+    redirect '/users'
+  else
+    erb :'authentications/new'
+  end
 end
 
