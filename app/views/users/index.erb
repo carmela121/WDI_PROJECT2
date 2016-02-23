@@ -1,1 +1,30 @@
-<h1>Users Index</h1>
+<h2>Users</h2>
+
+<a class="btn" href="/users/new">Add User</a>
+
+<div class="users">
+  <% @users.each do |user| %>
+  <div class="row">
+    <img src="<%= user.image %>" alt="<%= user.username %> photo" width=300>
+    <ul>
+      <li>
+        <h2>
+          <a href="/users/<%= user.id %>">
+            <%= user.username %>
+          </a>
+        </h2>
+      </li>
+      <li>
+        <a href="/artists/<%= user.id %>/edit">
+          Edit
+        </a>
+      </li>
+      <li>
+        <form method="post" action="/users/<%= user.id %>/delete">
+          <button>Delete</button>
+        </form>
+      </li>
+    </ul>
+  </div>
+  <% end %>
+</div>

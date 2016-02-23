@@ -1,9 +1,20 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Edit</title>
-</head>
-<body>
+<h2>Edit User</h2>
 
-</body>
-</html>
+<form action='/users/<%= "#{@user.id}" %>' method="post">
+  <label for="user[first_name]">First Name:</label>
+  <input name="user[first_name]" value='<%= "#{@user.first_name}" %>'>
+
+  <label for="user[last_name]">Last Name:</label>
+  <input name="user[last_name]" value='<%= "#{@user.last_name}" %>'>
+
+  <label for="user[email]">Email:</label>
+  <input name="user[email]" value='<%= "#{@user.email}" %>'>
+
+  <label for="user[image]">Image:</label>
+  <input name="user[image]" value='<%= "#{@user.email}" %>'>
+
+  <label for="user[username]">Username:</label>
+  <input name="user[username]" value='<%= "#{@artist.username}" %>'>
+
+  <input type="submit" value="Create">
+</form>
