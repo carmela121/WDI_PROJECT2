@@ -1,6 +1,9 @@
 # INDEX
 get '/recipes' do 
   authorize!
+  if params[:search] && !params[:search].empty?
+    @recipes = Recipe.where("title ILIKE :search OR ingredients ILIKE :search OR city ILIKE :search",{ search: "%#{params[:search]}%"})
+  else
   @recipes = Recipe.all 
   erb :'recipes/index'
 end

@@ -1,8 +1,7 @@
 require "sinatra/reloader" if development?
 
-require flash
 require 'sinatra/flash'
-require_relative '../lib/sinatra-flash'
+require_relative '../app/lib/sinatra-flash'
 register Sinatra::Flash
 
 
