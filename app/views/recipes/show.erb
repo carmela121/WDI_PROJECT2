@@ -1,14 +1,19 @@
-<h2><%= @recipe.title %> by <%= @recipe.user.username %></h2>
 
-<p><strong>recipe:</strong> <%= @recipe.title %></p>
+<div class="row">
+  <div class="col-md-1">
+
+  </div>
+  <div class="col-md-11">
+  <h2><%= @recipe.title %> by <%= @recipe.user.username %></h2>
+  <p><strong>recipe:</strong> <%= @recipe.title %></p>
+  <ul>
+
+    <% @recipe.categories.each do |category|  %>
+      <li><%= category.name %></li>
+    <% end %>
+    <a href="/recipes/<%= @recipe.id %>/edit">Edit</a>
+  </ul></div>
+  
+</div>
 
 
-
-<ul>
-
-  <% @recipe.categories.each do |category|  %>
-    <li><%= category.name %></li>
-  <% end %>
-</ul>
-
-<a href="/recipes/<%= @recipe.id %>/edit">Edit</a>

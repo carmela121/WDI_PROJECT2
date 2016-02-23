@@ -1,12 +1,36 @@
 <h1>New Recipe</h1>
-
 <form action="/recipes" method="post">
-  <label for="recipe[title]">Title:</label>
+  <input type="checkbox" name="category" value="Meat and Poultry">Meat and Poultry
+  <input type="checkbox" name="category" value="Fish and Seafood">Fish and Seafood
+  <input type="checkbox" name="category" value="Fruits and Vegetables">Fruits and Vegetables<br>
+  <input type="checkbox" name="category" value="Rice">Rice
+  <input type="checkbox" name="category" value="Pasta">Pasta
+  <input type="checkbox" name="category" value="Healthy">Healthy<br>
+  <input type="checkbox" name="category" value="Dessert">Dessert
+  <input type="checkbox" name="category" value="Bread">Bread
+  <input type="checkbox" name="category" value="Snack">Snack<br>
+  <input type="checkbox" name="category" value="Drink">Drink
+  <input type="checkbox" name="category" value="Salad">Salad
+  <input type="checkbox" name="category" value="World Cuisine">World Cuisine
+  <input type="checkbox" name="category" value="Soup and Stews">Soup and Stews
+
+  <label for="recipe[title]">Recipe:</label>
   <input name="recipe[title]">
   <br>
-  <label for="recipe[description]">Description:</label>
-  <input name="recipe[description]">
+  <label for="user[username]">Username:</label>
+  <input name="user[username]">
+  </br>
+  <br>
+  <textarea name="myTextBox" cols="50" rows="5">
+  Enter some text...
+  </textarea>
+  <br />
+  <input type="submit" />
+</form>
+
   
+  
+
   
   
   
