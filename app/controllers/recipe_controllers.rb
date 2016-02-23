@@ -12,7 +12,7 @@ end
 
 # CREATE
 
-post '/recipes' do 
+post '/recipes' do
   @recipe = Recipe.new(params[:recipe])
   if @recipe.save
     redirect "/recipes"

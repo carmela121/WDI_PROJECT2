@@ -1,6 +1,6 @@
-require_relative "../models/user.rb"
-require_relative "../models/recipe.rb"
-require_relative "../models/category.rb"
+require_relative "../app/models/user.rb"
+require_relative "../app/models/recipe.rb"
+require_relative "../app/models/category.rb"
 
 User.destroy_all
 Recipe.destroy_all
