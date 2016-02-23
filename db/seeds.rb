@@ -28,29 +28,21 @@ end
 
 [
   { 
-    username:
-    first_name:
-    last_name:
-    email:
-    image:
-  },
-  {
-    name: "Snoop Dog",
-    photo_url: "http://trace.tv/wp-content/uploads/2015/06/snoop-dogg.jpg",
-    nationality: "American"
+    username: "carcar",
+    first_name: "Carmen",
+    last_name: "Carmona",
+    email: "car@hotmail.com",
+    image: "image here"
   }
+
 ].each do |user|
   User.create!(user)
 end
 
 [
   { 
-    name: "John Lennon", 
-    photo_url: "http://t2.gstatic.com/images?q=tbn:ANd9GcRIiu_Tkn8HFUCeI0xElCJ6z2I9_LFob9Wx9GyTu7nseMsASMV5Ug", 
-    nationality: "British"
-  },
-  {
-    name: ""
+    name: "Meat and Poultry, Fish and seafood, Fruits and Vegetables, Rice, Pasta, Healthy, Dessert, Bread, Snack, Drink, Salad, World Cuisine" 
+    
     }
 ].each do |category|
   Category.create!(category)
