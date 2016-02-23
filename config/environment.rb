@@ -1,5 +1,11 @@
 require "sinatra/reloader" if development?
 
+require flash
+require 'sinatra/flash'
+require_relative '../lib/sinatra-flash'
+register Sinatra::Flash
+
+
 require "sass/plugin/rack"
 Sass::Plugin.options[:style] = :compact
 use Sass::Plugin::Rack
@@ -33,6 +39,8 @@ end
 ["models", "controllers", "helpers"].each do |folder|
   Dir[APP_ROOT.join('app', folder, '*.rb')].each { |file| require file }
 end
+
+
 
 
 
