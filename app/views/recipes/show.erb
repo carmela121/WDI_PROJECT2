@@ -12,7 +12,7 @@
 
     <% @recipe.categories.each do |category|  %>
       <li><%= category.name %></li>
-      <img class="videoThumb" src="<%= recipe.images %>"></a>
+      <img src="<%= recipe.images %>"></a>
     <% end %>
     <a href="/recipes/<%= @recipe.id %>/edit">Edit</a>
   </ul></div>
