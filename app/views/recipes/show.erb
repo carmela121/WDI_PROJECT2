@@ -4,16 +4,19 @@
 
   </div>
   <div class="col-md-11">
+
   <h2><%= @recipe.title %> by <%= @recipe.user.username %></h2>
-  <p><strong>recipe:</strong> <%= @recipe.title %></p>
+  <p><strong></strong> <%= @recipe.description %></p>
+  <p><strong></strong> <%= @recipe.ingredients %></p>
   <ul>
 
     <% @recipe.categories.each do |category|  %>
       <li><%= category.name %></li>
+      <img class="videoThumb" src="<%= recipe.images %>"></a>
     <% end %>
     <a href="/recipes/<%= @recipe.id %>/edit">Edit</a>
   </ul></div>
   
-</div>
+</div> 
 
 

@@ -1,5 +1,5 @@
 
-
+<div class="main_box">
 <div class="recipes">
   <div class="row">
     <ul>
@@ -11,7 +11,7 @@
               <a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/<%= recipe.video_url %>">
                 <img class="videoThumb" src="<%= recipe.images %>"></a>
               </figure>
-              <h2 class="videoTitle"><%= recipe.title %></h2>
+              <a class ="atag" href= "/recipes/<%= recipe.id %>"><%= recipe.title %></a>
             </article>
           </li>
         </ul>
@@ -19,5 +19,4 @@
       </ul>
     </div>
   </div>
-
-  
+</div>

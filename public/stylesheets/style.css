@@ -107,3 +107,7 @@
     height: 0;
     padding-bottom: 60%;
   }
+
+  .main_box {
+    background-color: #f2f2f2;
+  }
