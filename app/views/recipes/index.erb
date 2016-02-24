@@ -1,13 +1,12 @@
 <h2>Recipes Index</h2>
 
-<a class="btn" href="/recipes/new">Add Recipe</a>
 
 <div class="recipes">
   <div class="row">
     <ul>
       <% @recipes.each do |recipe| %>
       <li>
-      <iframe width="420" height="315" src="https://www.youtube.com/embed/ <%= recipe.video_url %> " frameborder="0" allowfullscreen></iframe>
+      <iframe width="420" height="315" src="https://www.youtube.com/embed/<%= recipe.video_url %>" frameborder="0" allowfullscreen></iframe>
 
         <a href="/recipes/<%= recipe.title %>">
           <%= recipe.title %>

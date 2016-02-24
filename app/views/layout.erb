@@ -7,10 +7,12 @@
 </head>
 <body>
   <main>
+  <nav class="navbar navbar-default" role="navigation">
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="/">Home</a></li>
         <li><a href="/recipes">Recipes</a></li>
+        
         <% if is_logged_in? %>
         <!-- some user specific menu items -->
         <li class="dropdown">
@@ -27,6 +29,7 @@
         <% end %>
       </ul>
     </div>
+    </nav>
     <%= styled_flash %>
     <%= yield %>            
     <footer>

@@ -28,6 +28,13 @@ Category.destroy_all
   ingredients: "1/2 cup cooked rice, 2 tablespoons olive oil, divided, 1/8 cup minced carrots, 1/8 cup celery, 6 bell peppers (any color) stems and seeds removed, cut in half lengthwise, 1/2 pound ground beef, 1/4 pound pancetta or lightly smoked bacon, diced, 1 1/2 cups prepared marinara sauce, 1/4 cup red wine, 1/2 teaspoon red pepper flakes, 1/3 cup heavy cream, 1/2 cup grated Parmesan cheese, divided",
   user_id: 1,
   video_url: "D_wyhDFuAZE"
+},
+  {
+  title: "Hearty Vegetable Lasagna", 
+  description:"This hearty, vegetable lasagna is the only lasagna my husband will eat. We love it!!! Hope you all enjoy as much as we do.", 
+  ingredients: "1 (16 ounce) package lasagna noodles, 1 pound fresh mushrooms, sliced, 3/4 cup chopped green bell pepper, 3/4 cup chopped onion, 3 cloves garlic, minced, 2 tablespoons vegetable oil, 2 (26 ounce) jars pasta sauce, 1 teaspoon dried basil, 1 (15 ounce) container part-skim ricotta cheese, 4 cups shredded mozzarella cheese, 2 eggs, 1/2 cup grated Parmesan cheese",
+  user_id: 1,
+  video_url: "VwlBd5ffkC4"
 }
 ].each do |recipe|
   Recipe.create!(recipe)
@@ -39,7 +46,8 @@ end
     first_name: "Carmen",
     last_name: "Carmona",
     email: "car@hotmail.com",
-    image: "image here"
+    image: "image here",
+    password: 'bumlover'
   }
 
 ].each do |user|
