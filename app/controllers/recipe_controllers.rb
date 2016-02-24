@@ -10,6 +10,7 @@ end
 
 # NEW
 get '/recipes/new' do
+  authorize!
   @recipe = Recipe.new
   erb :'recipes/new'
 end

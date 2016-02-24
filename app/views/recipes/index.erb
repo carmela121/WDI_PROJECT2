@@ -1,25 +1,23 @@
-<h2>Recipes Index</h2>
 
 
 <div class="recipes">
   <div class="row">
     <ul>
       <% @recipes.each do |recipe| %>
-      <li>
-      <iframe width="420" height="315" src="https://www.youtube.com/embed/<%= recipe.video_url %>" frameborder="0" allowfullscreen></iframe>
-
-        <a href="/recipes/<%= recipe.title %>">
-          <%= recipe.title %>
-        </a>
-  
-      </li>
-      <li>
-        <a href="/recipes/<%= recipe.id %>/edit">
-          Edit
-        </a>
-      </li>
-     
-      <% end %>
-    </ul>
+      <li class="col-lg-3 col-md-4 col-sm-6">
+        <ul class="tile">
+          <article class="video">
+            <figure>
+              <a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/<%= recipe.video_url %>">
+                <img class="videoThumb" src="<%= recipe.images %>"></a>
+              </figure>
+              <h2 class="videoTitle"><%= recipe.title %></h2>
+            </article>
+          </li>
+        </ul>
+        <% end %>
+      </ul>
+    </div>
   </div>
-</div>
+
+  

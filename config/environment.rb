@@ -14,10 +14,12 @@ assets do
     js :application, [
       '/bower_components/jquery/dist/jquery.min.js',
       '/bower_components/bootstrap/dist/js/bootstrap.min.js',
+      'bower_components/fancybox/source/jquery.fancybox.js',
       '/js/app.js'
     ]
     css :application, [
       '/bower_components/bootstrap/dist/css/bootstrap.min.css',
+      'bower_components/fancybox/source/jquery.fancybox.css',
       '/stylesheets/style.css'
     ]
     js_compression :jsmin

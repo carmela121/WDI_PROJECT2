@@ -3,6 +3,26 @@
     text-align: center;
  }
 
+ h2 {
+    font-size: 15px;
+    font-weight: 300;
+ }
+
+ ul {
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+ }
+
+ li {
+    text-align: center;
+    list-style: none;
+ }
+
+ .row {
+    margin: 0 auto;
+ }
+
  a {
     color: #fff;
  }
@@ -58,8 +78,32 @@
     color: white; 
  }
 
- 
+ /* First make sure the video thumbnail images are responsive. */
+    img {
+      max-width: 100%;
+      height: auto;
+    }
 
+  /* 
+  This is the starting grid for each video with thumbnails 5 across for the largest screen size.
+  It's important to use percentages or there may be gaps on the right side of the page. 
+  */
+  .video {
+    background: #fff;
+    padding-bottom: 20px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+    background: #f2f2f2;
+    border-radius: 3px;
+    height: 250px;
+  }
 
+  .video img:hover, .video img:active, .video img:focus {
+    opacity: 0.75;
+  }
 
-
+   /* These keep the height of each video consistent between YouTube and Vimeo.
+   Each can have thumbnail sizes that vary by 1px and are likely break your layout. */
+  .video figure {
+    height: 0;
+    padding-bottom: 60%;
+  }
