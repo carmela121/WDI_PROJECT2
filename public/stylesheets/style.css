@@ -75,7 +75,9 @@
  footer {
     position: fixed;
     bottom: 0;
-    color: white; 
+    color: white;
+    left: 10px; 
+    bottom: 10px;
  }
 
  /* First make sure the video thumbnail images are responsive. */
@@ -112,19 +114,30 @@
     background-color: #f2f2f2;
   }
 
-  a.atag {
+a.atag {
     color: #595959;
   }
 
-  label {
+label {
       display: inline-block;
       max-width: 100%;
       margin-bottom: 5px;
       font-weight: 500;
   }
 
-  .nav {
-    margin-left: 0px;
-  }
+.pic {
+  background-image: url(../images/icon.png);
+  background-position: center;
+  background-size: cover;
+  color: rgba(0, 0, 0, 0);
+  top: 10px;
+  left: 10px;
+  position: absolute;
+  height: 40px;
+  width: 40px;
+ }
 
- 
+ .tumbnail {
+  width:600px;
+  height: auto;
+ }

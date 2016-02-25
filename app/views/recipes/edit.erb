@@ -1,6 +1,7 @@
 <h2>Edit Recipes</h2>
 
-<form action="/recipes/<%= @recipe.id %>/update" method="post">
+<form action="/recipes/<%= @recipe.id %>" method="post">
+  <input type="hidden" name="_method" value="put"></input>
   <label for="recipe[title]">Title:</label>
   <input name="recipe[title]" value="<%= @recipe.title %>">
   <br>
@@ -10,11 +11,11 @@
   <input name="recipe[images]" value="<%= @recipe.images %>">
   </br>
   <label for="recipe[description]">Description:</label>
-  <textarea name="myTextBox" cols="50" rows="5" value="<%= @recipe.description %>"></textarea>
+  <textarea name="recipe[description]" cols="50" rows="5" ><%= @recipe.description %></textarea>
   
   <br>
   <label for="recipe[ingredients]">Ingredients:</label>
-  <textarea name="myTextBox" cols="50" rows="5" value="<%= @recipe.ingredients %>"></textarea>
+  <textarea name="recipe[ingredients]" cols="50" rows="5"><%= @recipe.ingredients %></textarea>
   <br />
  
   <% Category.all.each do |category| %>
@@ -24,6 +25,8 @@
   <% end %>
 
   <input type="Submit" />
+
+</form>
 
 
   
