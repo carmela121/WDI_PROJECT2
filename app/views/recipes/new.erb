@@ -1,6 +1,6 @@
 
 <form action="/recipes" method="post">
-  <div class="">
+  <div class="categories">
   <% Category.all.each do |category|  %>
     <label for="recipe[category_ids][]"><%= category.name %></label>
     <input type="checkbox" name="recipe[category_ids][]" value="<%= category.id%>" <%= "checked=checked" if @recipe.category_ids.include?(category.id) %>>
@@ -16,12 +16,12 @@
   <label for="recipe[video_url]"></label><br>
   <input name="recipe[video_url]" placeholder="Video url">
   <br>
-  <textarea name="myTextBox" cols="50" rows="5" placeholder="Description"></textarea>
+  <textarea name="recipe[description]" cols="50" rows="5" placeholder="Description"></textarea>
   <br />
   <br>
-  <textarea name="myTextBox" cols="50" rows="5" placeholder="Ingredients"></textarea>
+  <textarea name="recipe[ingredients]" cols="50" rows="5" placeholder="Ingredients"></textarea>
   <br />
-  <input type="submit" />
+  <input type="submit">
 </form>
 
   

@@ -3,19 +3,25 @@
 <form id="register" method="post" action="/register">
   
   <div class="form-group">
-    <label for="username">Username</label>
-    <input name="user[username]" type="text" class="input-medium" id="username" placeholder="Username">
+   <input name="user[first_name]" type="text" class="input-medium" id="firstname" placeholder="First Name">
   </div>
+  
   <div class="form-group">
-    <label for="email">Email address</label>
+   <input name="user[last_name]" type="text" class="input-medium" id="lastname" placeholder="Last Name">
+  </div>
+
+  <div class="form-group">
+  <input name="user[username]" type="text" class="input-medium" id="username" placeholder="Username">
+  </div>
+  
+  <div class="form-group">
     <input name="user[email]" type="email" class="input-medium" id="email" placeholder="Email">
   </div>
+  
   <div class="form-group">
-    <label for="password">Password</label>
     <input name="user[password]" type="password" class="input-medium" id="password" placeholder="Password">
   </div>
   <div class="form-group">
-    <label for="image">Image</label>
     <input name="user[image]" type="text" class="input-medium" id="image" placeholder="Upload your image">
   </div>
   <button type="submit" class="btn btn-default">Create</button>

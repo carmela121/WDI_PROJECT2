@@ -32,11 +32,8 @@ end
 
 get '/recipes/:id' do
   @recipe = Recipe.find(params[:id])
-  if @recipe
-  erb :'recipes/show'
-  else
-  redirect "/recipes"
-  end
+  @ingredients = @recipe.ingredients.split(",")
+  erb :"recipes/show"
 end
 
 # EDIT

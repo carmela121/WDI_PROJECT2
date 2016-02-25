@@ -3,7 +3,7 @@
     <div class="centered">
       <div class="col-md-6">
         <img class="" src="<%= @recipe.images %>">
-        <h2><%= @recipe.title %> by <%= @recipe.user.username %></h2>
+        <h2><%= @recipe.title %> by <a href="/users/<%=@recipe.user.id%>"><%= @recipe.user.username %></a></h2>
         <p><%= @recipe.description %></p>
         <ul>
           <% if is_logged_in? && can_edit_recipe?(@recipe) %>
@@ -17,8 +17,9 @@
         </ul>
       </div>
       <div class="col-md-6">
-
-        <p><%= @recipe.ingredients %></p>
+      <% @ingredients.each do |ingredient|%>
+        <p><%= ingredient %></p>
+      <% end %>
       </div>
     </div>
   </div>

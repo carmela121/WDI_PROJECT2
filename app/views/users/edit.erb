@@ -1,20 +1,11 @@
 <h2>Edit User</h2>
 
 <form action='/users/<%= "#{@user.id}" %>' method="post">
-  <label for="user[first_name]">First Name:</label>
+  <input type="hidden" name="_method" value="put"></input>
   <input name="user[first_name]" value='<%= "#{@user.first_name}" %>'>
-
-  <label for="user[last_name]">Last Name:</label>
   <input name="user[last_name]" value='<%= "#{@user.last_name}" %>'>
-
-  <label for="user[email]">Email:</label>
   <input name="user[email]" value='<%= "#{@user.email}" %>'>
-
-  <label for="user[image]">Image:</label>
-  <input name="user[image]" value='<%= "#{@user.email}" %>'>
-
-  <label for="user[username]">Username:</label>
+  <input name="user[image]" value='<%= "#{@user.image}" %>'>
   <input name="user[username]" value='<%= "#{@user.username}" %>'>
-
   <input type="submit" value="Submit">
 </form>

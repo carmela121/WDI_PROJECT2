@@ -103,7 +103,7 @@ end
 
 [
   { name: "Meat and Poultry" },
-  { name: "Fish and seafood" },
+  { name: "Fish and Seafood" },
   { name: "Fruits and Vegetables" },
   { name: "Rice" },
   { name: "Pasta" },

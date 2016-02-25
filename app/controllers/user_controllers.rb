@@ -47,7 +47,7 @@ end
 # UPDATE
 put '/users/:id' do
   authorize!
-  @user = User.find(params[:id])
+  @user = User.find(current_user.id)
   if @user.update(params[:user])
     redirect "/users/#{@user.id}"
   else
