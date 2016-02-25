@@ -20,6 +20,7 @@ end
 post '/recipes' do
   authorize!
   @recipe = Recipe.new(params[:recipe])
+  @recipe.user = current_user
   if @recipe.save
     redirect "/recipes"
   else

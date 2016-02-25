@@ -14,4 +14,8 @@ helpers do
       redirect '/login'
     end
   end
+
+  def can_edit_recipe?(recipe)
+    recipe.user == current_user
+  end
 end

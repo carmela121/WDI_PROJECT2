@@ -102,10 +102,18 @@ images: "https://i.ytimg.com/vi_webp/dAJq1FoXMFY/mqdefault.webp"
 end
 
 [
-  { 
-    name: "Meat and Poultry, Fish and seafood, Fruits and Vegetables, Rice, Pasta, Healthy, Dessert, Bread, Snack, Drink, Salad, World Cuisine" 
-    
-    }
+  { name: "Meat and Poultry" },
+  { name: "Fish and seafood" },
+  { name: "Fruits and Vegetables" },
+  { name: "Rice" },
+  { name: "Pasta" },
+  { name: "Healthy" },
+  { name: "Dessert" },
+  { name: "Bread" },
+  { name: "Snack" },
+  { name: "Drink" },
+  { name: "Salad" },
+  { name: "World Cuisine" }
 ].each do |category|
   Category.create!(category)
 end

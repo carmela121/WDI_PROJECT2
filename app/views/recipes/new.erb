@@ -1,10 +1,12 @@
 <h1>New Recipe</h1>
 <form action="/recipes" method="post">
-  
-  <% @recipe.categories.each do |category|  %>
-  <input type="checkbox" name="category" id= [] <%= category.name %>
+  <div class="checkbox">
+  <% Category.all.each do |category|  %>
+    <label for="recipe[category_ids][]"><%= category.name %></label>
+    <input type="checkbox" name="recipe[category_ids][]" value="<%= category.id%>" <%= "checked=checked" if @recipe.category_ids.include?(category.id) %>>
   <% end %>
-
+    </div>
+  <br>
   <label for="recipe[title]">Title:</label>
   <input name="recipe[title]">
   <br>
@@ -14,12 +16,13 @@
   <label for="recipe[video_url]">Video:</label>
   <input name="recipe[video_url]">
   <br>
-  <label for="user[username]">Username:</label>
-  <input name="user[username]">
-  </br>
+  <textarea name="myTextBox" cols="50" rows="5" placeholder="Description">
+  
+  </textarea>
+  <br />
   <br>
-  <textarea name="myTextBox" cols="50" rows="5">
-  Enter some text...
+  <textarea name="myTextBox" cols="50" rows="5" placeholder="Ingredients">
+  
   </textarea>
   <br />
   <input type="submit" />
