@@ -138,6 +138,28 @@ label {
  }
 
  .tumbnail {
-  width:600px;
-  height: auto;
+  width: 600px;
+  height: 600px;
  }
+
+
+/* RECIPIES SHOW */
+section.show {
+  margin: 0 auto;
+  margin-top: px;
+  width: 960px;
+}
+
+section.show .centered {
+  width: 960px;
+}
+
+section.show ul a {
+  margin: 15px;
+  font-size: 15px;
+
+}
+
+textarea {
+  margin-top: 24px;
+}

@@ -5,6 +5,6 @@
 
 <ul>
 <% @user.recipes.each do |recipe| %>
-  <li><%= recipe.title %></li>
+  <a href = "/recipes/<%= recipe.id %>"><li><%= recipe.title %></li>
 <% end %>
 </ul>

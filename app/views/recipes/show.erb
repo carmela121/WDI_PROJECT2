@@ -1,29 +1,25 @@
+<section class="show centered">
+  <div class="row">
+    <div class="centered">
+      <div class="col-md-6">
+        <img class="" src="<%= @recipe.images %>">
+        <h2><%= @recipe.title %> by <%= @recipe.user.username %></h2>
+        <p><%= @recipe.description %></p>
+        <ul>
+          <% if is_logged_in? && can_edit_recipe?(@recipe) %>
+          <a href="/recipes/<%= @recipe.id %>/edit">Edit</a>
+          <a href="/recipes/<%= @recipe.id %>/delete">Delete</a>
+          <% end %>
 
-<div class="row">
+          <% @recipe.categories.each do |category|  %>
+          <li><%= category.name %></li>
+          <% end %>
+        </ul>
+      </div>
+      <div class="col-md-6">
 
-  <div class="col-md-3">
-
-  <img class = "thumbnail" src="<%= @recipe.images %>"></a>
-
-    <h2><%= @recipe.title %> by <%= @recipe.user.username %></h2>
-    <p><%= @recipe.description %></p>
-    <p><%= @recipe.ingredients %></p>
-
-    <ul>
-
-      <% @recipe.categories.each do |category|  %>
-        <li><%= category.name %></li>
-      <% end %>
-      
-
-      <% if is_logged_in? && can_edit_recipe?(@recipe) %>
-        <a href="/recipes/<%= @recipe.id %>/edit">Edit</a>
-        <a href="/recipes/<%= @recipe.id %>/delete">Remove</a>
-      <% end %>
-    </ul>
-
+        <p><%= @recipe.ingredients %></p>
+      </div>
+    </div>
   </div>
-  
-</div> 
-
-
+</section>
