@@ -74,8 +74,7 @@
 
  footer {
     position: fixed;
-    bottom: 0;
-    color: white;
+    color: black;
     left: 10px; 
     bottom: 10px;
  }
@@ -165,4 +164,16 @@ textarea {
 }
 .categories {
   margin-top: 20px;
+}
+
+.checkbox-container {
+  margin: 20px auto;
+  width: 506px;
+}
+
+form.edit input[type=text] {
+  width: 372px;
+}
+.links {
+  font-color: blue;
 }

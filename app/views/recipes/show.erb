@@ -6,14 +6,15 @@
         <h2><%= @recipe.title %> by <a href="/users/<%=@recipe.user.id%>"><%= @recipe.user.username %></a></h2>
         <p><%= @recipe.description %></p>
         <ul>
-          <% if is_logged_in? && can_edit_recipe?(@recipe) %>
-          <a href="/recipes/<%= @recipe.id %>/edit">Edit</a>
-          <a href="/recipes/<%= @recipe.id %>/delete">Delete</a>
-          <% end %>
-
           <% @recipe.categories.each do |category|  %>
           <li><%= category.name %></li>
           <% end %>
+          <% if is_logged_in? && can_edit_recipe?(@recipe) %>
+        
+          <a class = "links" href="/recipes/<%= @recipe.id %>/edit">Edit</a>
+          <a class = "links" href="/recipes/<%= @recipe.id %>/delete">Delete</a>
+          <% end %>
+        
         </ul>
       </div>
       <div class="col-md-6">
